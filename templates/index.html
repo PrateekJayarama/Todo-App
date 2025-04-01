@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+	Todo App
+{% endblock title %}
+{% block body %}Todo App
+<main>
+	<h1>Add Your Todo's</h1>
+	<div id="form">
+		<form action="/" method="POST">
+			<label for="todo_title">ToDo Title:</label>
+			<input type="text" name="title" id="todo_title" placeholder="Title of your ToDo" required>
+			<br><br>
+			<label for="Desc">ToDo Description:</label>
+			<br>
+			<input type="text" name="desc" id="Desc" required>
+			<br>
+			<br>
+			<button id="submit_data">Submit</button>
+		</form>
+	</div>
+</main>
+{% endblock body %}	
+

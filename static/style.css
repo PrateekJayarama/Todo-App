@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    /* height:90vh; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(bg.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: antiquewhite;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+li {
+    list-style: none;
+    display: inline-flex;
+    padding-right: 12px;
+    margin-right: 2px; 
+}
+
+h2 {
+    cursor: pointer;
+    padding-right: 15px;
+}
+
+#navigation {
+    position: fixed;
+    width: 100%;
+    height: 40px; /* Increased height */
+    padding: 20px 0; /* Added padding for better spacing */
+    top: 0;
+    background-color: rgba(0, 0, 0, 1); /* Fully dark for better visibility */
+    z-index: 1000;
+}
+
+a {
+    text-decoration: none;
+    color: white;    
+}
+
+main {
+    padding-top: 120px; /* Increased to ensure content starts lower */
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    width: 90%;
+    margin: 40px ; 
+    border-collapse: collapse;
+    background-color: #0f0c0c;
+    border: 2px solid #4e4a4a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #4A4A4A;
+    color: #f4f0f0;
+}
+
+thead {
+    background-color: #4A4A4A;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#form {
+    background-color: #0f0c0c8c;
+    border: 2px solid #4A4A4A;
+    border-radius: 10px;
+    padding: 20px;
+    width: 480px; 
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); 
+}
+
+#form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffffff; 
+}
+
+#form input,
+#form textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #4A4A4A;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+#form button {
+    width: 100%;
+    background-color: rgb(16, 16, 181);
+    color: aliceblue;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#form button:hover {
+    background-color: #9366e2;
+}

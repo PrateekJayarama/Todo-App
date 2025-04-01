@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		{% block title %}
+			
+		{% endblock title %}
+	</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<nav id="navigation">
+		<ul>
+			<li><a href="/"><h2>Todo App</h2></a></li>
+			<li><a href="/" id="home">Home</a></li>
+			<li><a href="/todo_list" id="list">Your Todos List</a></li>
+			<li><a href="/about">About</a></li>
+		</ul>
+	</nav>
+	{% block body %}
+		
+	{% endblock body %}
+</body>
+</html>

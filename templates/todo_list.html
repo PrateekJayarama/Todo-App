@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	My Todos
+{% endblock title %}
+{% block body %}My Todos
+<main>
+	<h1>Your Todos</h1>
+	{% if allTodo|length ==0 %}
+		<p style="color: rgb(200, 11, 11); font-weight: bold; font-size: 25px;">No records found, Add Yours Todo now!</p>
+	{% else %}
+	<table>
+		<thead>
+			<tr>
+				<th scope="col">SlNo.</th>
+				<th scope="col">Title</th>
+				<th scope="col">Description</th>
+				<th scope="col">Time Added</th>
+				<th scope="col">Ops</th>
+			</tr>
+		</thead> 
+		<tbody>
+			{% for todo in allTodo  %}
+				<tr>
+					<th scope="row">{{loop.index}}</th>
+					<td>{{todo.title}}</td>
+					<td>{{todo.desc}}</td>
+					<td>{{todo.date_created}}</td>
+					<td>
+						<a href="/update/{{todo.sl_no}}" type="button" >Update</a>
+						<hr>
+						<a href="/delete/{{todo.sl_no}}" type="button">Delete</a>
+					</td>
+				</tr>
+			{% endfor %}
+
+		</tbody>
+	</table>
+	{% endif %}
+	
+</main>
+{% endblock body %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+	Todo App
+{% endblock title %}
+
+{% block body %}
+<main>
+	<h1>Update Your Todo's</h1>
+	<div id="form">
+		<form action="/update/{{todo.sl_no}}" method="POST">
+			<label for="todo_title">ToDo Title:</label>
+			<input type="text" name="title" id="todo_title"value="{{todo.title}}" placeholder="Title of your ToDo" required>
+			<br><br>
+			<label for="Desc">ToDo Description:</label>
+			<br>
+			<input type="text" name="desc"value="{{todo.desc}}" id="Desc" required>
+			<br>
+			<br>
+			<button id="submit_data">Update</button>
+		</form>
+	</div>
+</main>
+{% endblock body %}	
+
